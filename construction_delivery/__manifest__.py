@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "construction_delivery",
+    'name': "Donstruction Delivery",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -12,6 +12,7 @@
     """,
 
     'author': "Mohamed Gad",
+    'license':"LGPL-3"
     'website': "mohogad@gmail.com",
     'price':"35.0",
     'currency':"USD",
