@@ -12,7 +12,7 @@
     """,
 
     'author': "Mohamed Gad",
-    'license':"LGPL-3"
+    'license':"LGPL-3",
     'website': "mohogad@gmail.com",
     'price':"35.0",
     'currency':"USD",
