@@ -11,10 +11,12 @@
        the project consists of blocks and each block consist of units ,second group are the approvers who accept or reject the task delivry after inspection 
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "Mohamed Gad",
+    'website': "mohogad@gmail.com",
+    'price':"35.0",
+    'currency':"USD",
 
-    'category': 'Uncategorized',
+    'category': 'Project',
     'version': '0.1',
 
     'depends': ['base',
