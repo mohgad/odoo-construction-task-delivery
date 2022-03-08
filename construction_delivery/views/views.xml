@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="construction_delivery" model="ir.ui.view">
+        <field name="name">construction_delivery_form</field>
+        <field name="model">construction_delivery.construction_delivery</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                    <h1>
+                        <group>
+                            <field name="name" groups="project.group_project_manager"/>
+                        </group>
+                    </h1>
+                    <group>
+                        <field name="users" groups="project.group_project_manager" widget="many2many_tags"/>
+                        <field name="project" groups="project.group_project_manager"/>
+                        <field name="task" groups="project.group_project_manager"/>
+                    </group>
+                    <group>
+                        <field name="status" groups="construction_approval"/>
+                        <field name="notes" groups="construction_approval"/>
+                    </group>
+                    <group>
+                        <field name="block_no" groups="project.group_project_manager"/>
+                        <field name="unit_no" groups="project.group_project_manager"/>
+
+                    </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+
+            </form>
+
+
+        </field>
+
+    </record>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="construction_delivery.list">
+        <field name="name">construction_delivery list</field>
+        <field name="model">construction_delivery.construction_delivery</field>
+        <field name="arch" type="xml">
+            <tree>
+<!--                <header>-->
+<!--                    <button name="297" string="Create" type="action" class="btn-primary"-->
+<!--                            groups="project.group_project_user"/>-->
+<!--                </header>-->
+                <field name="name"/>
+                <field name="project"/>
+                <field name="task"/>
+                <field name="block_no"/>
+                <field name="unit_no"/>
+                <field name="notes"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="construction_delivery.action_window">
+        <field name="name">Task Delivery</field>
+        <field name="res_model">construction_delivery.construction_delivery</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="Task_Delivery"
+              name="Task Delivery"
+              parent="project.menu_main_pm"
+              action="construction_delivery.action_window"
+    />
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="construction_delivery.action_server">
+      <field name="name">construction_delivery server</field>
+      <field name="model_id" ref="model_construction_delivery_construction_delivery"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="construction_delivery" id="construction_delivery.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="construction_delivery.menu_1" parent="construction_delivery.menu_root"/>
+    <menuitem name="Menu 2" id="construction_delivery.menu_2" parent="construction_delivery.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="construction_delivery.menu_1_list" parent="construction_delivery.menu_1"
+              action="construction_delivery.action_window"/>
+    <menuitem name="Server to list" id="construction_delivery" parent="construction_delivery.menu_2"
+              action="construction_delivery.action_server"/>
+    -->
+
+</odoo>

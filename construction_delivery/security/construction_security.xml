@@ -1,0 +1,5 @@
+   <odoo>
+       <record id="construction_approval" model="res.groups">
+           <field name="name">Approver</field>
+       </record>
+   </odoo>
