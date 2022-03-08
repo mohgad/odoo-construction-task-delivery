@@ -3,8 +3,7 @@
     'name': "Construction Task Delivery",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+       Task Delivery Requests""",
 
     'description': """
        In construction projects there are 2 groups of users ,first group requests a task delivery with the project and task required and block and unit no.
