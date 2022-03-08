@@ -23,7 +23,7 @@
                 'project',
                 'mail',
                 ],
-    'image': ['cover.png',],
+    'image': ['static/description/cover.png',],
 
     'data': ['views/views.xml',
              'security/ir.model.access.csv',
